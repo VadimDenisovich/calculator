@@ -1,0 +1,106 @@
+/* работа со всеми элементами сайта */
+* {
+    font-family: Segoe UI;
+    box-sizing: border-box;
+}
+
+/* работа с телом сайта */
+body {
+    display: inline-flex; /* отображение в виде флекс-контейнера */
+    justify-content: center; /* центрирует по горизонтали */
+    align-items: center; /* центрирует по вертикуали */
+    height: 100vh; /* делает body высотой во всю видимую область экрана */
+    width: 100vw; /* делает body шириной во всю видимой область экрана */
+    background-color: #fff5f5;
+    margin: 0; /* делает нулевой внешний отступ */
+}
+
+/*работа с главным контейнером*/
+#calculator {
+    padding: 1.5vmin; /* внутренний отступ, 1.5% от ширины вьюпорта */
+    width: auto; /* ширина масштабируется автоматически */
+    height: auto; /* высота масштабируется автоматически */
+    border: 0.1vmax solid #000000;
+    background: linear-gradient(120deg, rgba(159, 233, 255, 0.63), #4feaff); /* задаем фон в виде линейного градиента*/
+    border-radius: 0.7vmax; /* скругление углов границы */
+    max-height: 40vmax; /* Устанавливаем максимальную высоту контейнера */
+    max-width: 40vmin; /* Устанавливаем максимальную ширину контейнера */
+
+    /* ниже тестовые свойства */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* работа с полем ввода */
+#input {
+    display: flex;
+    box-sizing: border-box; /* Устанавливаем границы максимально размера под границы родительского контейнера */
+
+    background-color: #FFFD96FF;
+    width: 100%; /*100%*/
+    max-width: 100%;
+    height: 3vmax; /*5vh*/
+    max-height: 15%; /*30%*/
+    font-size: 2vmin;
+    margin-bottom: 0.5vh; /* Устанавливаем нижний внешний отступ */
+    text-align: right;
+    border: 0.05vmax solid #626262;
+    border-radius: 0.4vmax;
+}
+
+/* при наведении курсором мыши на поле ввода */
+#input:hover {
+    border: 0.11vmax solid #626262;
+}
+
+/* работа со строкой кнопок */
+.btn__row {
+    display: flex;
+    flex-wrap: nowrap; /*wrap*/ /* Убираем перенос элементов на новую строку */
+    justify-content: space-between; /* Распределяем элементы равномерно по горизонтали c пробелом между ними, если есть пустое место */
+}
+
+/* работа с кнопками */
+.btn__items button {
+    /* ниже тест */
+    display: flex;
+    justify-content: center;
+
+    line-height: 1; /* Устанавливаем высоту строки в кнопке на 1 */
+    align-items: center; /* Помещаем элементы в центр по вертикали */
+
+    font-size: 2vmin;
+    max-width: 7.4vmin;
+    max-height: 5vmin;
+    height: 5vmin; /*5vmin*/
+    width: 7.4vmin; /*7.4vmin*/
+    margin-bottom: 0.5vh;
+    border: 0.05vmax solid #626262;
+    border-radius: 0.4vmax;
+    background-color: #ffffff;
+    cursor: pointer; /* при наведении на кнопку изменениям стиль курсора */
+}
+
+/* используя псевдокласс `:not(:last-child)` мы добились того
+   чтобы отступ был добавлен ко всем кнопкам, кроме последней */
+.btn__row button:not(:last-child) {
+    margin-right: 0.3em; /* Добавляем отступ справа */
+}
+
+/* при наведении курсором мыши на кнопки */
+.btn__items button:hover {
+    border: 0.11vmax solid #626262;
+    background-color: #d5d5d5;
+}
+
+/* работа с кнопкой равно */
+#btn__equal {
+    background-color: rgb(255, 253, 150);
+}
+
+/* при наведении курсором мыши на кнопку равно */
+#btn__equal:hover {
+    background-color: rgb(218, 213, 82);
+}

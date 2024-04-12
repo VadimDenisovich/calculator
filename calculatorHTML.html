@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="calculatorCSS.css">
+    <title>Calculator on JS</title>
+    <script src="calculatorJS.js"></script>
+</head>
+<body>
+<div id="calculator">
+    <!--        <div id="head_title">c a l c u l a t o r</div>-->
+    <input type="text" id="input" value="0" readonly>
+
+    <div class="btn__items">
+        <div class="btn__row">
+            <button type="button" onclick="erase()">C</button>
+            <button type="button" onclick="printElement('(')">(</button>
+            <button type="button" onclick="printElement(')')">)</button>
+            <button type="button" onclick="backspace()">←</button>
+        </div>
+        <!--            -->
+        <div class="btn__row">
+            <button type="button" onclick="printElement('7')">7</button>
+            <button type="button" onclick="printElement('8')">8</button>
+            <button type="button" onclick="printElement('9')">9</button>
+            <button type="button" onclick="printElement('*')">×</button>
+        </div>
+        <!--            -->
+        <div class="btn__row">
+            <button type="button" onclick="printElement('4')">4</button>
+            <button type="button" onclick="printElement('5')">5</button>
+            <button type="button" onclick="printElement('6')">6</button>
+            <button type="button" onclick="printElement('-')">-</button>
+        </div>
+        <!--            -->
+        <div class="btn__row">
+            <button type="button" onclick="printElement('1')">1</button>
+            <button type="button" onclick="printElement('2')">2</button>
+            <button type="button" onclick="printElement('3')">3</button>
+            <button type="button" onclick="printElement('+')">+</button>
+        </div>
+        <!--            -->
+        <div class="btn__row">
+            <button type="button" onclick="printElement('.')">.</button>
+            <button type="button" onclick="printElement('0')">0</button>
+            <button type="button" onclick="result()" id="btn__equal">=</button>
+            <button type="button" onclick="printElement('/')">÷</button>
+        </div>
+    </div>
+    <!--        <div id="test"></div>-->
+</div>
+</body>
+</html>
